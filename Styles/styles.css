@@ -138,16 +138,37 @@ body {
 .about {
   width: 100%;
   background-color: #fffbf8;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (50%)[2];
-      grid-template-columns: repeat(2, 50%);
-}
-
-.about__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .about__box-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.about .about__box-mobile .about__image-box {
+  width: 50%;
+}
+
+.about .about__box-mobile .about__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -156,19 +177,19 @@ body {
           align-items: center;
 }
 
-.about__card .about__card-information {
+.about .about__box-mobile .about__card .about__card-information {
   max-width: 450px;
   min-height: 300px;
 }
 
-.about__card .about__card-information h3 {
+.about .about__box-mobile .about__card .about__card-information h3 {
   color: #23303e;
   font-size: 2em;
   font-family: "Fraunces", serif;
   margin-bottom: 50px;
 }
 
-.about__card .about__card-information p {
+.about .about__box-mobile .about__card .about__card-information p {
   font-family: "Barlow", sans-serif;
   margin-bottom: 50px;
   color: #5a636c;
@@ -416,7 +437,7 @@ body {
   margin: 0 15px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .nav .nav__list {
     display: none;
     -webkit-box-orient: vertical;
@@ -474,10 +495,29 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .about__box-mobile .about__image-box {
+    width: 100%;
+  }
+  .about .about__box-mobile .about__card {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .about .about__box-mobile:nth-child(1) {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .about__card {
     height: 440px;

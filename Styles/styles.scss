@@ -140,31 +140,42 @@ body {
 .about {
     width: 100%;
     background-color: $white;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-}
-// Estilos tarjetas de texto e imagenes
-.about__card {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    .about__card-information {
-        max-width: 450px;
-        min-height: 300px;
-        // border: 1px solid black;
-        h3 {
-            color: $very__dark-desaturated-blue;
-            font-size: 2em;
-            font-family: $second__font;
-            margin-bottom: 50px;
+    flex-direction: column;
+    
+    .about__box-mobile{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        .about__image-box{
+            width: 50%;
         }
-        p {
-            font-family: $principal__font;
-            margin-bottom: 50px;
-            color: $very__dark-grayish-blue;
+        .about__card {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            .about__card-information {
+                max-width: 450px;
+                min-height: 300px;
+                // border: 1px solid black;
+                h3 {
+                    color: $very__dark-desaturated-blue;
+                    font-size: 2em;
+                    font-family: $second__font;
+                    margin-bottom: 50px;
+                }
+                p {
+                    font-family: $principal__font;
+                    margin-bottom: 50px;
+                    color: $very__dark-grayish-blue;
+                }
+            }
         }
     }
 }
+// Estilos tarjetas de texto e imagenes
+
 
 .button__card {
     background-color: transparent;

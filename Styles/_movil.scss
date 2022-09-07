@@ -1,4 +1,4 @@
-$break-point: 500px;
+$break-point: 700px;
 
 @media (max-width: $break-point) {
     //header
@@ -59,7 +59,20 @@ $break-point: 500px;
         grid-template-columns: repeat(1, 100%);
         .about__box-mobile{
             display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .about__image-box{
+                width: 100%;
+            }
+            .about__card{
+                justify-content: center;
+                width: 100%;
+            }
+        }
+        .about__box-mobile:nth-child(1){
             flex-direction: column-reverse;
+            justify-content: center;
+            
         }
     }
     .about__card {
